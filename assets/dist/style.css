@@ -1,16 +1,6 @@
 /*--------------grid---------------*/
 /*------------ colors -------------*/
 /*------------ fonts --------------*/
-/*
-	$c - color
-	$fs - font size [px for rem()]
-	$fw - wont weight
-	$lg - line height, calculated based on font size [+6];
-	$pb - padding bottom [px for rem()]
-*/
-/*
-	$bgc - background color in HEX
-*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -64,7 +54,7 @@ table {
   box-sizing: border-box;
   color: #81868e; }
 
-.flex-row, .row, .row-container, .nav-bar__container, .nav-bar__menu-wrap {
+.flex-row, .row, .row-container, .nav-bar__container, .nav-bar__menu-wrap, .portfolio__nav {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -181,5 +171,73 @@ table {
     transition: all .3s ease; }
     .hero__mouse-poiner:hover {
       background-color: lightgreen; }
+
+.title, .portfolio__title-wrap {
+  padding-top: 5rem !important;
+  padding-bottom: 3.75rem !important;
+  margin: 0 auto; }
+  .title__title, .portfolio__title {
+    font-family: Source Sans Pro, sans-serif;
+    color: #333b46;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: calc( 1.25rem + 0.375rem );
+    text-transform: capitalize;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem; }
+  .title__subtitle, .portfolio__subtitle {
+    font-family: Open Sans, sans-serif;
+    color: #81868e;
+    font-size: 0.875rem;
+    font-weight: 40;
+    line-height: calc( 0.875rem + 0.375rem );
+    text-transform: capitalize;
+    text-align: center;
+    padding: 0 20%; }
+  @media all and (max-width: 1024px) {
+    .title__subtitle, .portfolio__subtitle {
+      padding: 0 0; } }
+
+.portfolio__container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 0.9375rem; }
+.portfolio__title-wrap {
+  max-width: 50%;
+  width: 100%;
+  padding: 0 0.9375rem; }
+.portfolio__nav {
+  justify-content: center;
+  align-items: center; }
+  .portfolio__nav-item {
+    position: relative;
+    margin-right: 1.875rem;
+    padding-bottom: 0.75rem;
+    cursor: pointer;
+    font-family: Open Sans, sans-serif;
+    color: #464646;
+    font-size: 16;
+    font-weight: 400;
+    line-height: calc( 16 + 0.375rem );
+    text-transform: capitalize; }
+    .portfolio__nav-item:last-child {
+      margin-right: 0; }
+    .portfolio__nav-item::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 70%;
+      height: 0;
+      border: 0.125rem solid #fff;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .portfolio__nav-item--active::after, .portfolio__nav-item:hover::after {
+      border: 0.125rem solid #19bd9a; }
 
 /*# sourceMappingURL=style.css.map */
