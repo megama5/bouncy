@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" href="assets/img/favicon.png">
 	<title>Bouncy</title>
-	<link rel="stylesheet" href="assets/dist/style.css">
+	
+	<link rel="stylesheet" href="assets/dist/js/plugin/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="assets/dist/js/plugin/slick/slick.css">
+	<link rel="stylesheet" href="assets/dist/js/plugin/slick/slick-theme.css">
+	<link rel="stylesheet" href="assets/dist/css/plugin/font-awesome/css\font-awesome.min.css">
+	<link rel="stylesheet" href="assets/dist/css/style.css">
+
+	<script src="assets/dist/js/plugin/jquery/jquery-3.2.1.min.js"></script>
+	<script src="assets/dist/js/plugin/izotop/isotope.pkgd.min.js"></script>
+	<script src="assets/dist/js/plugin/fancybox/jquery.fancybox.min.js"></script>
+	<script src="assets/dist/js/plugin/slick/slick.min.js"></script>
+
 </head>
 <body>
 	<header class="nav-bar hero">
 		<div class="nav-bar__container">
 			<div class="nav-bar__logo-wrap">
 				<a href="#" class="nav-bar__logo-link">
-					<img src="assets/img/logo.svg" alt="Logo" class="nav-bar__logo-src">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="21" viewBox="0 0 115 21"><defs><path id="utkxa" d="M106.12 61.95c.9 0 1.63-.72 1.63-1.62 0-.9-.78-1.63-1.63-1.63h-3.3v3.25zm-.92-7.37a1.62 1.62 0 1 0 0-3.25h-2.38v3.25zM97.9 66V47.25h8.27c3 0 5.55 2.58 5.55 5.58a5.5 5.5 0 0 1-1.2 3.37 5.59 5.59 0 0 1 2.13 4.3c0 2.98-2.53 5.5-5.5 5.5zm26.67-18.75a9.4 9.4 0 0 1 9.37 9.4 9.35 9.35 0 0 1-18.72 0c0-5.17 4.18-9.4 9.35-9.4zm0 4.9a4.46 4.46 0 1 0 .03 8.93 4.46 4.46 0 0 0-.03-8.93zm17.23 6.38a2.45 2.45 0 0 0 4.9 0V47.25h4.95V58.6c0 4.13-3.33 7.4-7.4 7.4a7.35 7.35 0 0 1-7.4-7.4V47.25h4.95zM169.17 66l-8.85-8.87V66h-4.92V47.25h2l8.87 8.85v-8.85h4.93V66zm16.63-12.55a4.38 4.38 0 0 0-3.15-1.22 4.25 4.25 0 0 0-4.4 4.4c0 2.55 1.85 4.4 4.4 4.4a4.3 4.3 0 0 0 3.15-1.25l3.5 3.45a9.38 9.38 0 1 1-.05-13.25zm17.07 5.65V66H198v-6.9l-6.85-11.85h5.67l3.6 6.25 3.63-6.25h5.67z"/></defs><g><g transform="translate(-96 -46)"><use fill="#fff" xlink:href="#utkxa"/></g></g></svg>
 				</a>
 			</div>
 			<nav class="nav-bar__menu">
@@ -19,13 +31,13 @@
 						<a class="nav-bar__menu-link nav-bar__menu-link--active" href="#">hello</a>
 					</li>
 					<li class="nav-bar__menu-item">
-						<a class="nav-bar__menu-link" href="#">portfolio</a>
+						<a class="nav-bar__menu-link" href="#portfolio">portfolio</a>
 					</li>
 					<li class="nav-bar__menu-item">
-						<a class="nav-bar__menu-link" href="#">team</a>
+						<a class="nav-bar__menu-link" href="#team">team</a>
 					</li>
 					<li class="nav-bar__menu-item">
-						<a class="nav-bar__menu-link" href="#">contact</a>
+						<a class="nav-bar__menu-link" href="#contact">contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -39,13 +51,13 @@
 				<p class="hero__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
 			</div>
 			<!-- .hero__info-wrap -->
-			<div class="hero__mouse-poiner"></div>
+			<div class="hero__mouse-poiner" data-href="portfolio"></div>
 		</section>
 		<!-- .hero__container -->
 	</header>
 	
 	<main>
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<div class="portfolio__container">
 				<div class="portfolio__title-wrap">
 					<h2 class="title__title">THE PORTFOLIO</h2>
@@ -53,7 +65,7 @@
 				</div>
 				<!-- .portfolio__title-wrap -->
 				<ul class="portfolio__nav">
-					<li class="portfolio__nav-item portfolio__nav-item--active" data-id=".all">All Works</li>
+					<li class="portfolio__nav-item portfolio__nav-item--active" data-id="*">All Works</li>
 					<li class="portfolio__nav-item" data-id=".print">Print</li>
 					<li class="portfolio__nav-item" data-id=".brand">Branding</li>
 					<li class="portfolio__nav-item" data-id=".web">Web</li>
@@ -61,18 +73,306 @@
 				</ul>
 				<!-- .portfolio__nav -->
 				<div class="portfolio__img-wrap">
-					<div class="portfolio__img-holder">
-						<img src="" alt="Some image" class="portfolio__img-src">
+					<div class="portfolio__izotop-wrap">
+					<div class="portfolio__img-holder print">
+						<img src="assets/img/layer-86.png" alt="Some image" class="portfolio__img-src">
 					</div>
+					<div class="portfolio__img-holder brand html">
+						<img src="assets/img/layer-87.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder print">
+						<img src="assets/img/layer-88.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder brand">
+						<img src="assets/img/layer-89.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder print">
+						<img src="assets/img/layer-90.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder web">
+						<img src="assets/img/layer-91.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder web">
+						<img src="assets/img/layer-92.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder web html">
+						<img src="assets/img/layer-93.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder brand">
+						<img src="assets/img/layer-94.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder html">
+						<img src="assets/img/layer-95.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder html">
+						<img src="assets/img/layer-96.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					<div class="portfolio__img-holder print">
+						<img src="assets/img/layer-97.png" alt="Some image" class="portfolio__img-src">
+					</div>
+					</div>
+					<!-- .portfolio__izotop-wrap -->
 				</div>
+				<!-- .portfolio__img-wrap -->
 			</div>
 			<!-- .portfolio__container -->
 		</section>
 		<!-- .portfolio  -->
+
+		<section class="team" id="team">
+			<div class="team__container">
+				<div class="team__title-wrap">
+					<h2 class="team__title">THE TEAM</h2>
+					<p class="team__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				</div>
+				<div class="team__content-wrap">
+					<div>
+						<div class="team__content-block">
+							<div class="team__content-img-wrap">
+								<img src="assets/img/man.jpg" alt="Man's photo" class="team__content-img-src">
+							</div>
+							<!-- /.team__content-img-wrap -->
+							<div class="team__content-text-wrap">
+								<div class="team__content-title-wrap">
+									<h3 class="team__content-title">
+									Abdullah Noman
+									</h3>
+									<p class="team__content-subtitle">
+										Creative Director, Code Cafe
+									</p>
+								</div>
+								
+								<p class="team__content-text">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+								</p>
+							</div>
+							<!-- /.team__content-text-wrap -->
+						</div>
+					</div>
+					<!-- /.team__content-block -->
+					<div>
+					<div class="team__content-block">
+						<div class="team__content-img-wrap">
+							<img src="assets/img/man.jpg" alt="Man's photo" class="team__content-img-src">
+						</div>
+						<!-- /.team__content-img-wrap -->
+						<div class="team__content-text-wrap">
+							<div class="team__content-title-wrap">
+								<h3 class="team__content-title">
+								Abdullah Noman
+								</h3>
+								<p class="team__content-subtitle">
+									Creative Director, Code Cafe
+								</p>
+							</div>
+							
+							<p class="team__content-text">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+							</p>
+						</div>
+						<!-- /.team__content-text-wrap -->
+					</div></div>
+					<!-- /.team__content-block -->
+					<div>
+					<div class="team__content-block">
+						<div class="team__content-img-wrap">
+							<img src="assets/img/man.jpg" alt="Man's photo" class="team__content-img-src">
+						</div>
+						<!-- /.team__content-img-wrap -->
+						<div class="team__content-text-wrap">
+							<div class="team__content-title-wrap">
+								<h3 class="team__content-title">
+								Abdullah Noman
+								</h3>
+								<p class="team__content-subtitle">
+									Creative Director, Code Cafe
+								</p>
+							</div>
+							
+							<p class="team__content-text">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+							</p>
+						</div>
+						<!-- /.team__content-text-wrap -->
+					</div></div>
+					<!-- /.team__content-block -->
+				</div>
+				<!-- /.team__content-wrap -->
+
+			</div>
+			<!-- /.team__container -->
+		</section>
+		<!-- /.team -->
+
+		<section class="black-and-white">
+			<div class="black-and-white__container">
+				<h3 class="black-and-white__container-title">
+				Already Loved Us? Let’s talk!
+				</h3>
+				<button class="black-and-white__container-btn" data-href="#contact">
+					Contact Us
+				</button>
+			</div>
+			<!-- /.black-and-white__container -->
+		</section>
+		<!-- /.black-and-white -->
+
+		<section class="testimonials">
+			<div class="testimonials__container">
+				<div class="testimonials__title-wrap">
+					<h2 class="testimonials__title">Testimonials</h2>
+					<p class="testimonials__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				</div>
+				<!-- .portfolio__title-wrap -->
+			
+				<div class="testimonials__data">
+					<div class="testimonials__data-wbg">
+					<div class="testimonials__data-slick-wrap">
+						<div class="testimonials__data-item">
+								<div class="testimonials__data-item-img">
+									<img src="assets/img/author-photo.jpg" alt="Athor Photo" class="imgtestimonials__data-item-img-src">
+								</div>
+								<!-- /.testimonials__data-item-img -->
+								<div class="testimonials__data-item-text">
+									<p class="testimonials__data-item-text-value">
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+									</p>
+									<!-- /.testimonials__data-item-text-value -->
+									<h3 class="testimonials__data-item-text-author">
+										PARTHO
+									</h3>
+									<!-- /.testimonials__data-item-text-author -->
+									<p class="testimonials__data-item-text-about">
+										FOUNDER, ARTWAYS BD
+									</p>
+									<!-- /.testimonials__data--item-text-about -->
+								</div>
+								<!-- /.testimonials__data-text-wrap -->
+						</div>
+						<!-- /.testimonials__data-item -->
+					</div>
+					<!-- /.testimonials__data-slick-wrap -->
+					<div class="testimonials__data-slick-wrap">	
+						<div class="testimonials__data-item">
+								<div class="testimonials__data-item-img">
+									<img src="assets/img/author-photo.jpg" alt="Athor Photo" class="imgtestimonials__data-item-img-src">
+								</div>
+								<!-- /.testimonials__data-item-img -->
+								<div class="testimonials__data-item-text">
+									<p class="testimonials__data-item-text-value">
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+									</p>
+									<!-- /.testimonials__data-item-text-value -->
+									<h3 class="testimonials__data-item-text-author">
+										PARTHO
+									</h3>
+									<!-- /.testimonials__data-item-text-author -->
+									<p class="testimonials__data-item-text-about">
+										FOUNDER, ARTWAYS BD
+									</p>
+									<!-- /.testimonials__data--item-text-about -->
+								</div>
+								<!-- /.testimonials__data-text-wrap -->
+						</div>
+						<!-- /.testimonials__data-item -->
+					</div>
+					<!-- /.testimonials__data-slick-wrap -->
+					<div class="testimonials__data-slick-wrap">	
+						<div class="testimonials__data-item">
+								<div class="testimonials__data-item-img">
+									<img src="assets/img/author-photo.jpg" alt="Athor Photo" class="imgtestimonials__data-item-img-src">
+								</div>
+								<!-- /.testimonials__data-item-img -->
+								<div class="testimonials__data-item-text">
+									<p class="testimonials__data-item-text-value">
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+									</p>
+									<!-- /.testimonials__data-item-text-value -->
+									<h3 class="testimonials__data-item-text-author">
+										PARTHO
+									</h3>
+									<!-- /.testimonials__data-item-text-author -->
+									<p class="testimonials__data-item-text-about">
+										FOUNDER, ARTWAYS BD
+									</p>
+									<!-- /.testimonials__data--item-text-about -->
+								</div>
+								<!-- /.testimonials__data-text-wrap -->
+						</div>
+						<!-- /.testimonials__data-item -->
+					</div>
+					<!-- /.testimonials__data-slick-wrap -->							
+					</div>
+					<!-- /.testimonials__data-slick-wrap -->
+				</div>
+				<!-- /.testimonials_data -->
+				</div>
+				<!-- /.testimonials_data-wbg -->
+			</div>
+			<!-- /.testimonials__container -->
+		</section>
+		<!-- /.testimonials -->
+
+		<section class="contacts" id="contact">
+			<div class="contacts__container">
+				<div class="contacts__title-wrap">
+					<h2 class="contacts__title">Contact Us</h2>
+					<p class="contacts__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				</div>
+			</div>
+			<!-- /.ontacts__container -->
+			<div class="contacts__map" id="map">
+				<!-- google maps -->
+			</div>
+			<!-- /.contacts__map -->
+		</section>
+		<!-- /.contacts -->
 	</main>
 	
 	<footer>
-		
+		<section class="bouncy">
+			<div class="bouncy__container">
+				<a href="#" class="bouncy__logo">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="21" viewBox="0 0 115 21"><defs><path id="utkxa" d="M106.12 61.95c.9 0 1.63-.72 1.63-1.62 0-.9-.78-1.63-1.63-1.63h-3.3v3.25zm-.92-7.37a1.62 1.62 0 1 0 0-3.25h-2.38v3.25zM97.9 66V47.25h8.27c3 0 5.55 2.58 5.55 5.58a5.5 5.5 0 0 1-1.2 3.37 5.59 5.59 0 0 1 2.13 4.3c0 2.98-2.53 5.5-5.5 5.5zm26.67-18.75a9.4 9.4 0 0 1 9.37 9.4 9.35 9.35 0 0 1-18.72 0c0-5.17 4.18-9.4 9.35-9.4zm0 4.9a4.46 4.46 0 1 0 .03 8.93 4.46 4.46 0 0 0-.03-8.93zm17.23 6.38a2.45 2.45 0 0 0 4.9 0V47.25h4.95V58.6c0 4.13-3.33 7.4-7.4 7.4a7.35 7.35 0 0 1-7.4-7.4V47.25h4.95zM169.17 66l-8.85-8.87V66h-4.92V47.25h2l8.87 8.85v-8.85h4.93V66zm16.63-12.55a4.38 4.38 0 0 0-3.15-1.22 4.25 4.25 0 0 0-4.4 4.4c0 2.55 1.85 4.4 4.4 4.4a4.3 4.3 0 0 0 3.15-1.25l3.5 3.45a9.38 9.38 0 1 1-.05-13.25zm17.07 5.65V66H198v-6.9l-6.85-11.85h5.67l3.6 6.25 3.63-6.25h5.67z"/></defs><g><g transform="translate(-96 -46)"><use fill="#fff" xlink:href="#utkxa"/></g></g></svg>
+				</a>
+				<p class="bouncy__text">
+					Copyright 2015. All rights Reserved
+				</p>
+				<ul class="bouncy__social">
+					<li class="bouncy__social-item bouncy__social-item--fb">
+						<a href="#" class="bouncy__social-item-link">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="bouncy__social-item bouncy__social-item--tw">
+						<a href="#" class="bouncy__social-item-link">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="bouncy__social-item bouncy__social-item--in">
+						<a href="#" class="bouncy__social-item-link">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="bouncy__social-item bouncy__social-item--inst">
+						<a href="#" class="bouncy__social-item-link">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="bouncy__social-item bouncy__social-item--v">
+						<a href="#" class="bouncy__social-item-link">
+							<i class="fa fa-vimeo" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- /.bouncy -->
 	</footer>
+
+	<script src="assets/dist/js/map.js"></script>
+	<script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBVJa-qqieK__0Fpky4oy-_11lI6YTxic&language=ru&region=RU&callback=initMap">
+	</script>
+	<script src="assets/dist/js/script.js"></script>
 </body>
 </html>
