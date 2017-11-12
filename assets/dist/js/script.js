@@ -55,13 +55,6 @@
 	  dots: true,
 	  arrows: false,
 	});
-	/* scrols */
-	$('.hero__mouse-poiner').on('click', function(event){
-		document.querySelector('.portfolio').scrollIntoView({
-			block: "start", 
-  		behavior: 'smooth' 
-		});	
-	});
-	
+
 
 })(jQuery);
