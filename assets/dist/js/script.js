@@ -56,5 +56,4 @@
 	  arrows: false,
 	});
 
-
 })(jQuery);
