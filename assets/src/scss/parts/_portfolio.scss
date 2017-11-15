@@ -1,0 +1,47 @@
+.portfolio{
+	background-color: $gray04;
+	padding-bottom: rem(100);
+	&__container{
+		@extend .container;
+	}
+  @include title();
+	&__nav{
+		@extend .flex-row;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(62);
+		&-item{
+			position: relative;
+			margin-right: rem(30);
+			padding-bottom: rem(12);
+			cursor: pointer;
+			@include font($font1,$gray02,rem(16),400);
+			&:last-child{
+				margin-right: 0;
+			}
+			&::after{
+				position: absolute;
+				content: '';
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 70%;
+				height: 0;
+				border: rem(2) solid transparent;
+				@include transition();
+			}
+			&--active::after, &:hover::after{
+				border: rem(2) solid $green;
+			}
+		}
+	}
+	&__img-wrap{
+		padding: 0 3%;
+	}
+	&__img-holder{
+		display: inline-block;
+		font-size: 0;
+		margin-bottom: rem(10);
+	}
+}

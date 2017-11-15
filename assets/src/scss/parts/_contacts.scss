@@ -1,0 +1,13 @@
+.contacts{
+		padding-bottom: rem(55);
+		&__container{
+			@extend .container;
+		}
+		@include title();
+		&__map{
+			height: rem(600);
+			background: url('../../img/map_bg.jpg') center no-repeat;
+			background-size: cover;
+		}
+
+}
