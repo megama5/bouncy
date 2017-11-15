@@ -1,0 +1,54 @@
+.testimonials{
+	background-color: $gray04;
+	padding-bottom: rem(100);
+	&__container{
+		@extend .container;
+	}
+	@include title();
+	&__data{
+		@include col(12);
+		background-color: $white;
+			padding-bottom: rem(30);
+		&-wbg{
+
+		}
+		&-slick-wrap{
+			// nothing here, just wrap for slickslider.js
+		}
+		&-item{
+			@extend .flex-row;
+			padding: rem(55) 7.43%;
+			&-img{
+				width: rem(130);
+				height: rem(130);
+				border-radius: 50%;
+				background-color: $gray04;
+				overflow: hidden;
+				&-src{
+					width: 100%;
+				}
+			}
+			&-text{
+				@include col(10);
+				padding-left: rem(70);
+				&-value{
+					@include font($font1, $gray, rem(16), 400);
+					letter-spacing: rem(.8);
+					margin-bottom: rem(30);
+				}
+				&-author{
+					@include font($font1, $green, rem(16), 700);
+					letter-spacing: rem(0.64);
+					margin-bottom: rem(12);
+				}
+				&-about{
+					@include font($font1, $gray02, rem(14), 700);
+					text-transform: uppercase;
+					letter-spacing: rem(0.56);
+				}
+			}
+		}
+		
+	}
+
+}

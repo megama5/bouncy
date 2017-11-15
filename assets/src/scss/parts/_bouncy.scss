@@ -1,0 +1,63 @@
+.bouncy{
+	padding-bottom: rem(70);
+	&__container{
+		@extend .container;
+		@extend .flex-col;
+		justify-content: center;
+		align-items: center;
+	}
+	&__logo{
+		display: inline-block;
+		margin-bottom: rem(24);
+		@include svg($black, $green);
+	}
+	&__text{
+		@include font($font1, $gray, rem(14), 400);
+		letter-spacing: .7;
+		margin-bottom: rem(37);
+	}
+	&__social{
+		@extend .flex-row;
+		justify-content: center;
+		align-items: center;
+		&-item{
+			width: rem(26);
+			height: rem(26);
+			border-radius: 50%;
+			background-color: $green;
+			text-align: center;
+    	line-height: rem(26);
+    	margin-right: rem(10);
+    	cursor: pointer;
+    	transition: all .3s ease;
+    	&:hover{
+    		background-color: $green;
+    	}
+			&--fb{
+				background-color: #0e76a8;
+			}
+			&--tw{
+				background-color: #26a6d1;
+			}
+			&--in{
+				background-color: #0e76a8;
+			}
+			&--inst{
+				background-color: #3f729b;
+			}
+			&--v{
+				background-color: #86c9ef;
+			}
+			&-link{
+				font-size: rem(16);
+				display: block;
+				width: 100%;
+				height: 100%;
+				& .fa{
+					color: $white;
+				}
+			}
+
+		}
+	}
+}

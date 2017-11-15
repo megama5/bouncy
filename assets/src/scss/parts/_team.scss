@@ -1,0 +1,62 @@
+.team{
+	padding-bottom: rem(100);
+	&__container{
+		@extend .container;
+	}
+	
+	@include title();
+
+	&__content-wrap{
+		@include col(10);
+		margin: 0 auto;
+		padding-bottom: rem(66);
+	}
+	&__content-block{
+		@extend .flex-row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__content-img-wrap{
+		max-width: rem(285);
+		max-height: rem(364);
+		overflow: hidden;
+		font-size: 0
+	}
+	&__content-img-src{
+		width: 100%;
+	}
+	&__content-text-wrap{
+		@include col(5);
+		padding-left: 0;
+		padding-right: rem(40);
+		padding-top: rem(30);
+		text-align: right;
+	}
+	&__content-title-wrap{
+		margin-bottom: rem(32);
+		position: relative;
+
+	
+		&::after{
+			position: absolute;
+			content: '';
+			border-right: rem(4) solid $green;
+			height: 80%;
+			top: 10%;
+			bottom: 10%;
+			right: rem(-30);
+
+		}
+	}
+	&__content-title{
+		@include font($font1,$gray02,rem(20),400);
+		letter-spacing: rem(0.8);
+	}
+	&__content-subtitle{
+		@include font($font2,$gray,rem(14),300);
+		font-style: italic;
+	}
+	&__content-text{
+		@include font($font1,$gray,rem(14),400);
+	}
+}

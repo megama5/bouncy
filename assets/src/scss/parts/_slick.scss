@@ -1,0 +1,25 @@
+/**
+* Some changes for slick slider component.
+* Include this file at the end of scss include list.
+*/
+.slick-dots{
+    bottom: 0;
+	& li[role="presentation"]{
+    position: relative;
+    display: inline-block;
+    width: rem(10);
+    height: rem(10);
+    margin: 0 rem(5);
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    border: rem(1) solid $green;
+    transition: all 150ms linear;
+    &.slick-active, &:hover{
+    	background: $green;
+    }
+    & button{
+			display: none;
+		}
+	}
+}

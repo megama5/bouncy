@@ -1,0 +1,22 @@
+@import 'settings/functions';
+@import 'settings/variables';
+@import 'settings/mixins';
+
+@import 'settings/reset';
+@import 'settings/fonts';
+@import 'settings/general';
+
+//parts
+@import 'parts/button';
+@import 'parts/nav-bar';
+@import 'parts/hero';
+@import 'parts/title';
+@import 'parts/portfolio';
+@import 'parts/team';
+@import 'parts/black-and-white';
+@import 'parts/testimonials';
+@import 'parts/contacts';
+@import 'parts/bouncy';
+
+//end (plugins css changes)
+@import 'parts/slick';

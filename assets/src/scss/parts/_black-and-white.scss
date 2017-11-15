@@ -1,0 +1,52 @@
+.black-and-white{
+	position: relative;
+	z-index: 10;
+	background-color: #000;
+	padding: rem(58) 0;
+	&::before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../../img/layer-104.png') center no-repeat;
+		background-size: cover;
+		z-index: -1;
+		content: '';
+		opacity: .15;	
+	}
+	&::after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../../img/layer-105.png') center no-repeat;
+		background-size: cover;
+		z-index: -2;
+		content: '';
+		opacity: .2;
+	}
+	&__container{
+		@extend .container;
+		text-align: center;
+		&-title{
+			@include font($font1, $white, rem(20),400);
+			letter-spacing: rem(.8);
+			margin-bottom: rem(30);
+		}
+		&-btn{
+			@include font($font1, $white, rem(16),400);
+			@extend .button;
+			@extend .button--active;
+	    background: transparent;
+	    &:focus{
+	    	outline: none;
+	    }
+	    &:hover{
+	    	background-color: $white;
+	    	color: #000;
+	    }
+		}
+	}
+}
